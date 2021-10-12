@@ -1,0 +1,17 @@
+// Your styles go here; the following is but an example
+:root {
+  body {
+    background-color: lightcyan;
+  }
+
+  h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    margin-left: 1rem;
+    color: navy;
+
+    & .subtitle {
+      font-size: .8em;
+      color: gray
+    }
+  }
+}
