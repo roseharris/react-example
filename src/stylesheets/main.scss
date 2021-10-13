@@ -1,17 +1,83 @@
-// Your styles go here; the following is but an example
+$purple: #6610f2;
+$orange: #fd7e14;
+$teal: #198754;
+
 :root {
-  body {
-    background-color: lightcyan;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  --purple: #6610f2;
+  --orange: #fd7e14;
+  --teal: #198754;
+
+  body { margin: 0; }
+
+  header { 
+    text-align: center;
+    border-bottom: 1px solid var(--purple);
   }
+}
 
-  h1 {
-    font-family:Arial, Helvetica, sans-serif;
-    margin-left: 1rem;
-    color: navy;
+*, ::after, ::before {
+  box-sizing: inherit;
+}
 
-    & .subtitle {
-      font-size: .8em;
-      color: gray
+nav {
+  margin-bottom: 1rem;
+  & > ul {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+
+    & > li:not(:last-child) { margin-right: 2rem; }
+
+    & a {
+      text-decoration: none;
+      color: var(--purple);
+      &:hover {
+        margin-bottom: .5rem;
+        border-bottom: 2px solid #aaa;
+      }
     }
   }
+}
+
+.vbox, .gbox, .wbox {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin:10% 20%;
+  height: 35vh;
+  border-radius: 1rem;
+}
+
+.vbox {
+  background-color: lighten($purple, 45%);
+  border: 1px solid var(--purple);
+}
+
+.gbox {
+  background-color: lighten($orange, 45%);
+  border: 1px solid var(--orange);
+
+  a { color: var(--orange) }
+}
+
+.wbox {
+  background-color: lighten($teal, 60%);
+  border: 1px solid var(--teal);
+
+  a { color: var(--teal) }
+  h1 { 
+    color: indianred; 
+  }
+}
+
+footer {
+  padding: 1rem;
+  background: var(--purple);
+  color: white;
+  text-align: center;
 }
